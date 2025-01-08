@@ -8,10 +8,16 @@
     <meta property="og:image" content="">
     <title>식물 검색사이트</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Joan&family=Noto+Serif+KR:wght@200..900&display=swap');
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 50px;
+            background-color: rgb(72, 110, 88);
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         input[type="text"] {
@@ -19,19 +25,40 @@
             width: 300px;
             font-size: 16px;
         }
-
+        .box{
+            background: rgba(255, 255, 255, 0.9);
+            width: auto;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
         button {
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
         }
+        .noto-serif-kr {
+            font-family: "Noto Serif KR", serif;
+            font-weight: weight;
+            font-style: normal;
+        }
+        .joan-regular {
+            font-family: "Joan", serif;
+            font-weight: 400;
+            font-style: normal;
+            color: rgb(255, 255, 255);
+            font-size: 60pt;
+        }
     </style>
 </head>
 <body>
-    <h1>농작물과 공기정화식물을 검색해보세요</h1>
-    <div>자료출처: 농촌진흥청</div>
-    <input type="text" id="searchInput" placeholder="Enter search term">
-    <button onclick="search()">Search</button>
+    <h1 class="noto-serif-kr">농작물과 공기정화식물을 검색해보세요</h1>
+    <div class="noto-serif-kr">자료출처: 농촌진흥청</div>
+    <div class="box">
+        <input type="text" id="searchInput" placeholder="Enter search term">
+        <button onclick="search()">Search</button>
+    </div>
 
     <script>
         function search() {
